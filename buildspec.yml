@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies
+      - npm install || true  # use 'true' if there's no package.json
+  build:
+    commands:
+      - echo Building app...
+      - echo "<html><h1>Hello from CodeBuild!</h1></html>" > index.html
+
+artifacts:
+  files:
+    - index.html
